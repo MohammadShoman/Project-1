@@ -47,10 +47,13 @@ const animalsQuestions=[
 
     const questions=document.querySelector("h2")
     
-    const options=document.querySelector(".answer")
+    const options=document.querySelector(".all")
 
     let currentQuestion;
     let allAnimalsQuestions=[]
+    let allAnimalsOptions=[]
+    let counter=animalsQuestions.length;
+
 
 
     const setAllAnimalsQuestions=()=>{
@@ -60,16 +63,63 @@ const animalsQuestions=[
         }
     }
 
+
+
     const getQuestions=()=>{
+        //Questions
         const questionNumber=allAnimalsQuestions[Math.floor(Math.random()*allAnimalsQuestions.length)]
         currentQuestion=questionNumber
        // console.log(currentQuestion)
+
         questions.innerHTML=currentQuestion.question;
+        const index= allAnimalsQuestions.indexOf(questionNumber)
+        allAnimalsQuestions.splice(index, 1)
+        //console.log(questionNumber)
+       // console.log(allAnimalsQuestions)
         
+       //-----------------------------------------------------------------------------------------------------
+       //Options
+        const allOptions =currentQuestion.options.length
+        for(i=0;i<allOptions;i++){
+            allAnimalsOptions.push(i)
+        }
+
+        for(i=0;i<allOptions;i++){
+
+        const answer=document.createElement("button")
+        
+        answer.innerHTML=currentQuestion.options[i]
+        
+        answer.className="btn"
+        options.appendChild(answer)
+        
+        
+        
+        //console.log(currentQuestion.options[i])
+        }
+
+
+        counter--
     }
+
+
+    
+
+     
+    //------------------------------------------------------------------------------------------
+    const next=()=>{
+        if(counter===0){
+            console.log("test is over")
+        }else{
+            getQuestions()
+        }
+
+    }
+
+    //------------------------------------------------------------------------------------------
     window.onload=function(){
         setAllAnimalsQuestions()
         getQuestions()
-
+        
     }
 
