@@ -1,3 +1,47 @@
 body{
     background-image: url("./animalss.jpg");
 }
+
+.all{
+    justify-content: center;
+    align-content:center;
+    text-align:center;
+    height: 700px;
+    width:700px;
+    border-style: solid;
+    border-radius: 20px;
+    margin:150px 0px 30px 400px;
+    background-color:yellowgreen;
+    margin: auto;
+
+}
+.Question{
+    margin:50px 10px 20px 10px;
+    border-style:double;
+    background-color:papayawhip;
+    border-radius: 30px;
+}
+
+.btn{
+    background-color:papayawhip;
+    margin:20px 10px 20px 10px;
+    border-style:double;
+    border-radius: 30px;
+    text-align: left;
+    height: 60px;
+    width: 600px;
+    font-size:20px;
+    font-family: cursive;
+}
+
+.next{
+    height: 60px;
+    width: 125px;
+    text-align: center;
+    margin:25px  0px 0px 300px; 
+    border-style:double;
+    background-color:papayawhip;
+    border-radius: 30px;
+    font-size:20px;
+    font-family: cursive;
+}

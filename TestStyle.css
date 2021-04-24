@@ -27,7 +27,8 @@ body{
     
 }
 button{
-   
+   justify-content:center;
+   align-items:center;
     height: 200px;
     width: 250px;
     font-size: 40px;
@@ -35,21 +36,45 @@ button{
     font-weight: bolder;
     color: white;
     font-style: oblique;
-    margin: 40px 80px 80px 80px;
+    margin: 40px ;
     
 }
 #animals{
-    margin-left:200px;
+    margin-left: 80px;
     background-image: url('./animalss.jpg' ) ;
 }
+#animals:hover{
+    color:black;
+    cursor:pointer;
+}
 #cars{
-
     background-image: url('./carss.png' );
 }
-#sport{
-   
-    background-image: url('./sportss.jpg' );
+#cars:hover{
+    color:wheat;
+    cursor:pointer;
 }
 
+
+#sport{
+   color:white;
+    background-image: url('./sportss.jpg' );
+}
+#sport:hover{
+    color: black;
+    cursor:pointer;
+    
+}
+
+
+
+@media screen and (max-width:700px) {
+    .allButtons{
+        display:block;
+        justify-content: center;
+        align-items:center;
+
+    }
+}
 
 

@@ -1,3 +1,4 @@
+
 console.log("Ouiz")
 
 
@@ -41,4 +42,34 @@ const animalsQuestions=[
 ]
 
 
-    console.log(animalsQuestions)
+    //console.log(animalsQuestions[0])
+
+
+    const questions=document.querySelector("h2")
+    
+    const options=document.querySelector(".answer")
+
+    let currentQuestion;
+    let allAnimalsQuestions=[]
+
+
+    const setAllAnimalsQuestions=()=>{
+        const totalAnimalsQuestions=animalsQuestions.length;
+        for(i=0;i<totalAnimalsQuestions;i++){
+            allAnimalsQuestions.push(animalsQuestions[i])
+        }
+    }
+
+    const getQuestions=()=>{
+        const questionNumber=allAnimalsQuestions[Math.floor(Math.random()*allAnimalsQuestions.length)]
+        currentQuestion=questionNumber
+       // console.log(currentQuestion)
+        questions.innerHTML=currentQuestion.question;
+        
+    }
+    window.onload=function(){
+        setAllAnimalsQuestions()
+        getQuestions()
+
+    }
+
