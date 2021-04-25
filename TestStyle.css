@@ -1,6 +1,7 @@
 body{
     background-image: url('./laibrary.jfif');
     color:white;
+    
 }
 
 
@@ -24,6 +25,7 @@ body{
     justify-content: center;
     align-items:center;
     margin: auto;
+    
     
 }
 button{
