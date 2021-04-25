@@ -103,6 +103,20 @@ button{
     
 }
 
+#Arabic{
+    
+    color:white;
+    background-image: url('./arabicmg.jfif' );
+}
+#Arabic:hover{
+    color: black;
+    cursor:pointer;
+    box-shadow: 10px solid rgb(255, 3, 3);
+    transform:scale(1.02);
+    transform:transform 300px;
+    
+}
+
 
 @media screen and (max-width:700px) {
     .allButtons{
