@@ -1,60 +1,60 @@
-console.log("Ouiz");
+console.log("Cars");
 
-const animalsQuestions = [
+const carsQuestions = [
   {
-    question: "What is the biggest animal that has ever lived ?",
+    question: "Which is not a fluid your car needs? ",
     options: [
-      "A) Blue whale",
-      "B) African elephant",
-      "C) Apatosaurus (aka Brontosaurus)",
-      "D) Spinosaurus",
+      "A) Headlight fluid",
+      "B) Oil",
+      "C) Gas",
+      "D) Brake fluid",
     ],
     answer: 0,
   },
 
   {
-    question: "Which of these animals lives the longest?",
+    question: "You should always have a spare of this in your trunk.",
     options: [
-      "A) Ocean quahog (clam)",
-      "B) Red sea urchin",
-      "C) Galapagos tortoise",
-      "D) Rougheye rockfish",
+      "A) Radio",
+      "B) Tire ",
+      "C) Steering wheel ",
+      "D) Seatbelt",
     ],
-    answer: 0,
+    answer: 1,
   },
 
   {
-    question: "What existing bird has the largest wingspan?",
-    options: ["A) Stork", "B) Swan", "C) Condor", "D) Albatross"],
+    question: "Which vehicle is the best-selling of all time?",
+    options: ["A) Ford F-Series ", "B) Toyota Corolla", "C) Chevrolet Corvette", "D) GMC Sierra"],
+    answer: 1,
+  },
+  {
+    question: "Which Japanese manufacturer is the largest on the planet?",
+    options: ["A) Nissan", "B) Honda ", "C) Toyota ", "D) Suzuki"],
+    answer: 2,
+  },
+  {
+    question: "How should you control your vehicle when it begins to slide?",
+    options: ["A) Turn away from the slide", "B) Hammer on the breaks", "C) Pull the e-brake", "D) Turn into the slide "],
     answer: 3,
-  },
-  {
-    question: "Which of the following animals sleeps standing up?",
-    options: ["A) Gorillas", "B) Flamingos", "C) Hedgehogs", "D) Ravens"],
-    answer: 1,
-  },
-  {
-    question: "What is the fastest water animal?",
-    options: ["A) Porpoise", "B) Sailfish", "C) Flying fish", "D) Tuna"],
-    answer: 1,
   },
 ];
 
-//console.log(animalsQuestions[0])
+//console.log(carsQuestions[0])
 
 const options = document.querySelector(".all");
 
 let currentQuestion;
-let allAnimalsQuestions = [];
-let allAnimalsOptions = [];
-let counter = animalsQuestions.length;
+let allCarsQuestions = [];
+let allCarsOptions = [];
+let counter = carsQuestions.length;
 let score = "";
 let scoreCounter = 0;
 
-const setAllAnimalsQuestions = () => {
-  const totalAnimalsQuestions = animalsQuestions.length;
-  for (i = 0; i < totalAnimalsQuestions; i++) {
-    allAnimalsQuestions.push(animalsQuestions[i]);
+const setAllCarsQuestions = () => {
+  const totalCarsQuestions = carsQuestions.length;
+  for (i = 0; i < totalCarsQuestions; i++) {
+    allCarsQuestions.push(carsQuestions[i]);
   }
 };
 
@@ -62,7 +62,7 @@ const getQuestions = () => {
   //Questions
   options.innerHTML = "";
   const questionNumber =
-    allAnimalsQuestions[Math.floor(Math.random() * allAnimalsQuestions.length)];
+    allCarsQuestions[Math.floor(Math.random() * allCarsQuestions.length)];
   currentQuestion = questionNumber;
   // console.log(currentQuestion)
   const questions = document.createElement("h2");
@@ -70,17 +70,17 @@ const getQuestions = () => {
   questions.className = "Question";
   options.appendChild(questions);
 
-  const index = allAnimalsQuestions.indexOf(questionNumber);
-  allAnimalsQuestions.splice(index, 1);
+  const index = allCarsQuestions.indexOf(questionNumber);
+  allCarsQuestions.splice(index, 1);
 
   //console.log(questionNumber)
-  // console.log(allAnimalsQuestions)
+  // console.log(allCarsQuestions)
 
   //-----------------------------------------------------------------------------------------------------
   //Options
   const allOptions = currentQuestion.options.length;
   for (i = 0; i < allOptions; i++) {
-    allAnimalsOptions.push(i);
+    allCarsOptions.push(i);
   }
 
   for (i = 0; i < allOptions; i++) {
@@ -139,6 +139,6 @@ const next = () => {
 //------------------------------------------------------------------------------------------
 
 window.onload = function () {
-  setAllAnimalsQuestions();
+  setAllCarsQuestions();
   getQuestions();
 };

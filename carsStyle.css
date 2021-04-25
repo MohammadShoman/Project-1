@@ -1,8 +1,9 @@
 body{
-    background-image: url("./animalss.jpg");
+    background-image: url("./carss.png");
 }
 
 .all{
+    
     justify-content: center;
     align-content:center;
     text-align:center;
@@ -11,7 +12,7 @@ body{
     border-style: solid;
     border-radius: 20px 20px 0px 0px;
     margin:150px 0px 30px 400px;
-    background-color:yellowgreen;
+    background-color:black;
     margin: auto;
     border-bottom: 0px;
     
@@ -21,7 +22,7 @@ body{
     margin:50px 10px 20px 10px;
     padding-top:20px;
     border-style:double;
-    background-color:papayawhip;
+    background-color:rgb(121, 121, 121);
     border-radius: 30px;
     width:400;
     height: 50px;
@@ -31,7 +32,7 @@ body{
 }
 
 .btn{
-    background-color:papayawhip;
+    background-color:rgb(121, 121, 121);
     margin:20px 10px 20px 10px;
     border-style:double;
     border-radius: 30px;
@@ -43,11 +44,10 @@ body{
 }
 .btn:hover{
     cursor: pointer;
-    color:red;
-    box-shadow: 10px solid rgb(255, 3, 3);
+    color:white;
+    box-shadow: 5px solid white;
     transform:scale(1.02);
     transform:transform 300px;
-    
 }
 
 .next{
@@ -56,7 +56,7 @@ body{
     text-align: center;
     margin:15px  0px 0px 30px; 
     border-style:double;
-    background-color:papayawhip;
+    background-color:rgb(121, 121, 121);
     border-radius: 30px;
     font-size:20px;
     font-family: cursive;
@@ -71,13 +71,13 @@ body{
     border-top: 0px;
     border-radius: 0px 0px 20px 20px;
     margin:150px 0px 30px 400px;
-    background-color:yellowgreen;
+    background-color:black;
     margin: auto;
 }
 .next:hover{
     cursor:pointer;
-    color:red;
-    box-shadow: 10px solid rgb(255, 3, 3);
+    color:white;
+    box-shadow: 5px solid rgb(255, 255, 255);
     transform:scale(1.02);
     transform:transform 300px;
 }
