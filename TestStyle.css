@@ -53,10 +53,10 @@ button{
     transform:transform 300px;
 }
 #cars{
-    background-image: url('./carss.png' );
+    background-image: url('./carimage.jfif' );
 }
 #cars:hover{
-    color:wheat;
+    color:black;
     cursor:pointer;
     box-shadow: 10px solid rgb(255, 3, 3);
     transform:scale(1.02);
