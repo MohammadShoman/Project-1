@@ -38,11 +38,11 @@ button{
     font-weight: bolder;
     color: white;
     font-style: oblique;
-    margin: 40px ;
+    margin: 80px ;
     
 }
 #animals{
-    margin-left: 80px;
+    margin-left: 190px;
     background-image: url('./animalss.jpg' ) ;
 }
 #animals:hover{
@@ -69,6 +69,19 @@ button{
     background-image: url('./sportss.jpg' );
 }
 #sport:hover{
+    color: black;
+    cursor:pointer;
+    box-shadow: 10px solid rgb(255, 3, 3);
+    transform:scale(1.02);
+    transform:transform 300px;
+    
+}
+#Math{
+    margin-left: 190px;
+    color:white;
+    background-image: url('./math.png' );
+}
+#Math:hover{
     color: black;
     cursor:pointer;
     box-shadow: 10px solid rgb(255, 3, 3);
