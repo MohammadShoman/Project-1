@@ -1,5 +1,6 @@
 body{
     background-image: url("./animalss.jpg");
+    background-repeat: repeat;
 }
 
 .all{

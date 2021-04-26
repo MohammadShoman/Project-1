@@ -1,5 +1,6 @@
 body{
     background-image: url("./sportss.jpg");
+    background-repeat: repeat;
 }
 
 .all{

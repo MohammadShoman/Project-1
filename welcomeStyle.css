@@ -1,0 +1,42 @@
+body {
+  background-image: url("./QuizText-BG.jpg");
+  background-repeat: round;
+  color: white;
+}
+
+#welcome {
+  justify-content: center;
+  text-align: center;
+
+  color: white;
+  font-size: 75px;
+  margin: auto;
+  flex-grow: 1;
+}
+#start {
+  background-color: black;
+  color: white;
+  font-size: 75px;
+  margin-left: 650px;
+  margin-right:650px;
+  border: 5px solid white;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-grow: 1;
+  border-radius: 25px;
+}
+#start:hover {
+  cursor: pointer;
+  color: white;
+  box-shadow: 10px solid rgb(2, 1, 1);
+  transform: scale(1.02);
+  transform: transform 300px;
+}
+.all {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  column-gap: 40px;
+  row-gap: 60px;
+}

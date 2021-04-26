@@ -1,5 +1,6 @@
 body{
-    background-image: url('./laibrary.jfif');
+    background-image: url('./QuizText-BG.jpg');
+    background-repeat: round;
     color:white;
     
 }
@@ -17,6 +18,8 @@ body{
     color: white;
 }
 .allButtons{
+    display: flex;
+    flex-direction: row;
     font-size: 40px;
     font-family:cursive;
     font-weight: bolder;
@@ -24,7 +27,7 @@ body{
     font-style: oblique;
     justify-content: center;
     align-items:center;
-    margin: auto;
+    margin: 40px;
     
     
 }
@@ -38,12 +41,26 @@ button{
     font-weight: bolder;
     color: white;
     font-style: oblique;
-    margin: 80px ;
+    margin: 60px ;
     
 }
+.text{
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    font-family:cursive;
+    font-weight: bolder;
+    color: white;
+    font-style: oblique;
+    justify-content: center;
+    align-items:center;
+    margin: auto;
+}
+
 #animals{
-    margin-left: 190px;
+    
     background-image: url('./animalss.jpg' ) ;
+    background-repeat: round;
 }
 #animals:hover{
     color:black;
@@ -54,6 +71,7 @@ button{
 }
 #cars{
     background-image: url('./carimage.jfif' );
+    background-repeat: round;
 }
 #cars:hover{
     color:black;
@@ -67,6 +85,7 @@ button{
 #sport{
    color:white;
     background-image: url('./sportss.jpg' );
+    background-repeat: round;
 }
 #sport:hover{
     color: black;
@@ -77,9 +96,10 @@ button{
     
 }
 #Math{
-    margin-left: 190px;
+    
     color:white;
     background-image: url('./math.png' );
+    background-repeat: round;
 }
 #Math:hover{
     color: black;
@@ -93,6 +113,7 @@ button{
     
     color:white;
     background-image: url('./Sciences.png' );
+    background-repeat: round;
 }
 #Sciences:hover{
     color: black;
@@ -107,6 +128,8 @@ button{
     
     color:white;
     background-image: url('./arabicmg.jfif' );
+    background-repeat: round;
+    
 }
 #Arabic:hover{
     color: black;
