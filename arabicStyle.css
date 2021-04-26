@@ -2,7 +2,17 @@ body{
     background-image: url("./arabicmg.jfif");
     background-repeat: repeat;
 }
-
+H1{
+    color:papayawhip;
+    background-color:rgb(151, 0, 93);
+    border:1px solid;
+    height: 50px;
+    width: 100px;
+  }
+  #home{
+    height: 50px;
+    width: 100px;
+  }
 .all{
     justify-content: center;
     align-content:center;

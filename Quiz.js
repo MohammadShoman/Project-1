@@ -51,7 +51,9 @@ let allAnimalsOptions = [];
 let counter = animalsQuestions.length;
 let score = "";
 let scoreCounter = 0;
+
 const questionsText=document.querySelector(".questionNumber")
+ 
 
 const setAllAnimalsQuestions = () => {
   const totalAnimalsQuestions = animalsQuestions.length;
@@ -59,6 +61,7 @@ const setAllAnimalsQuestions = () => {
     allAnimalsQuestions.push(animalsQuestions[i]);
   }
 };
+
 
 const getQuestions = () => {
   //Questions
@@ -142,9 +145,13 @@ const next = () => {
   getQuestions();
 };
 
+
+
+
 //------------------------------------------------------------------------------------------
 
 window.onload = function () {
   setAllAnimalsQuestions();
   getQuestions();
+  
 };

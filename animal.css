@@ -3,6 +3,23 @@ body {
   background-repeat: repeat;
 }
 
+H1{
+  color:black;
+  background-color:yellowgreen;
+  border:1px solid;
+  height: 50px;
+  width: 100px;
+}
+#home{
+  height: 50px;
+  width: 100px;
+}
+.timer{
+  display:flex;
+  flex-direction: row;
+  height: 50px;
+width: 100px;
+}
 .all {
   justify-content: center;
   align-content: center;
