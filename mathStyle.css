@@ -1,84 +1,97 @@
-body{
-    background-image: url("./math.png");
-    background-repeat: repeat;
+body {
+  background-image: url("./math.png");
+  background-repeat: repeat;
 }
 
-.all{
-    justify-content: center;
-    align-content:center;
-    text-align:center;
-    height: 550px;
-    width:700px;
-    border-style: solid;
-    border-radius: 20px 20px 0px 0px;
-    margin:150px 0px 30px 400px;
-    background-color:rgb(255, 251, 6);
-    margin: auto;
-    border-bottom: 0px;
-    
-
+.all {
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  height: 550px;
+  width: 700px;
+  border-style: solid;
+  border-radius: 20px 20px 0px 0px;
+  margin: 150px 0px 30px 400px;
+  background-color: rgb(255, 251, 6);
+  margin: auto;
+  border-bottom: 0px;
 }
-.Question{
-    margin:50px 10px 20px 10px;
-    padding-top:20px;
-    border-style:double;
-    background-color:papayawhip;
-    border-radius: 30px;
-    width:400;
-    height: 50px;
-    justify-content: center;
-    align-content:center;
-    text-align:center;
+.Question {
+  margin: 50px 10px 20px 10px;
+  padding-top: 20px;
+  border-style: double;
+  background-color: papayawhip;
+  border-radius: 30px;
+  width: 400;
+  height: 50px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
 }
 
-.btn{
-    background-color:papayawhip;
-    margin:20px 10px 20px 10px;
-    border-style:double;
-    border-radius: 30px;
-    text-align: left;
-    height: 60px;
-    width: 600px;
-    font-size:20px;
-    font-family: cursive;
+.btn {
+  background-color: papayawhip;
+  margin: 20px 10px 20px 10px;
+  border-style: double;
+  border-radius: 30px;
+  text-align: left;
+  height: 60px;
+  width: 600px;
+  font-size: 20px;
+  font-family: cursive;
 }
-.btn:hover{
-    cursor: pointer;
-    color:red;
-    box-shadow: 10px solid rgb(255, 3, 3);
-    transform:scale(1.02);
-    transform:transform 300px;
-    
+.btn:hover {
+  cursor: pointer;
+  color: red;
+  box-shadow: 10px solid rgb(255, 3, 3);
+  transform: scale(1.02);
+  transform: transform 300px;
 }
 
-.next{
-    height: 60px;
-    width: 125px;
-    text-align: center;
-    margin:15px  0px 0px 30px; 
-    border-style:double;
-    background-color:papayawhip;
-    border-radius: 30px;
-    font-size:20px;
-    font-family: cursive;
+.next {
+  height: 60px;
+  width: 125px;
+  text-align: center;
+  margin: 15px 0px 0px 30px;
+  border-style: double;
+  background-color: papayawhip;
+  border-radius: 30px;
+  font-size: 20px;
+  font-family: cursive;
 }
-#next{
-    justify-content: center;
-    align-content:center;
-    text-align:center;
-    height: 100px;
-    width:700px;
-    border-style: solid;
-    border-top: 0px;
-    border-radius: 0px 0px 20px 20px;
-    margin:150px 0px 30px 400px;
-    background-color:rgb(255, 251, 6);
-    margin: auto;
+#next {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  height: 100px;
+  width: 700px;
+  border-style: solid;
+  border-top: 0px;
+  border-radius: 0px 0px 20px 20px;
+  margin: 150px 0px 30px 400px;
+  background-color: rgb(255, 251, 6);
+  margin: auto;
 }
-.next:hover{
-    cursor:pointer;
-    color:red;
-    box-shadow: 10px solid rgb(255, 3, 3);
-    transform:scale(1.02);
-    transform:transform 300px;
+.next:hover {
+  cursor: pointer;
+  color: red;
+  box-shadow: 10px solid rgb(255, 3, 3);
+  transform: scale(1.02);
+  transform: transform 300px;
+}
+.questionNumber {
+  height: 50px;
+  width: 175px;
+  text-align: center;
+  margin: 15px 0px 0px 30px;
+  border: solid rgb(141, 148, 156);
+  background-color: papayawhip;
+  border-radius: 30px;
+  font-size: 20px;
+  font-family: cursive;
+  text-align: center;
+  padding-top: 10px;
+  margin-right: 220px;
 }

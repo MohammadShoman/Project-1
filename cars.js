@@ -44,12 +44,14 @@ const carsQuestions = [
 
 const options = document.querySelector(".all");
 
+let questionCounter=1;
 let currentQuestion;
 let allCarsQuestions = [];
 let allCarsOptions = [];
 let counter = carsQuestions.length;
 let score = "";
 let scoreCounter = 0;
+const questionsText=document.querySelector(".questionNumber")
 
 const setAllCarsQuestions = () => {
   const totalCarsQuestions = carsQuestions.length;
@@ -60,6 +62,7 @@ const setAllCarsQuestions = () => {
 
 const getQuestions = () => {
   //Questions
+  questionsText.innerHTML="Question "+(questionCounter) +"of "+carsQuestions.length
   options.innerHTML = "";
   const questionNumber =
     allCarsQuestions[Math.floor(Math.random() * allCarsQuestions.length)];
@@ -132,7 +135,8 @@ const next = () => {
     alert(score);
     return window.location.assign("Test.html");
   }
-
+  questionCounter++
+  questionsText.innerHTML="Question "+(questionCounter) +"of "+carsQuestions.length
   getQuestions();
 };
 

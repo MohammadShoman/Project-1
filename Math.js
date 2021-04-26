@@ -44,12 +44,14 @@ const mathQuestions = [
 
 const options = document.querySelector(".all");
 
+let questionCounter=1;
 let currentQuestion;
 let allMathQuestions = [];
 let allMathOptions = [];
 let counter = mathQuestions.length;
 let score = "";
 let scoreCounter = 0;
+const questionsText=document.querySelector(".questionNumber")
 
 const setAllMathQuestions = () => {
   const totalMathQuestions = mathQuestions.length;
@@ -60,6 +62,7 @@ const setAllMathQuestions = () => {
 
 const getQuestions = () => {
   //Questions
+  questionsText.innerHTML="Question "+(questionCounter) +"of "+mathQuestions.length
   options.innerHTML = "";
   const questionNumber =
     allMathQuestions[Math.floor(Math.random() * allMathQuestions.length)];
@@ -132,7 +135,8 @@ const next = () => {
     alert(score);
     return window.location.assign("Test.html");
   }
-
+  questionCounter++
+  questionsText.innerHTML="Question "+(questionCounter) +"of "+mathQuestions.length
   getQuestions();
 };
 

@@ -44,12 +44,14 @@ const arabicQuestions = [
 
 const options = document.querySelector(".all");
 
+let questionCounter=1;
 let currentQuestion;
 let allArabicQuestions = [];
 let allArabicOptions = [];
 let counter = arabicQuestions.length;
 let score = "";
 let scoreCounter = 0;
+const questionsText=document.querySelector(".questionNumber")
 
 const setAllArabicQuestions = () => {
   const totalArabicQuestions = arabicQuestions.length;
@@ -60,6 +62,7 @@ const setAllArabicQuestions = () => {
 
 const getQuestions = () => {
   //Questions
+  questionsText.innerHTML="Question "+(questionCounter) +"of "+arabicQuestions.length
   options.innerHTML = "";
   const questionNumber =
     allArabicQuestions[Math.floor(Math.random() * allArabicQuestions.length)];
@@ -132,7 +135,8 @@ const next = () => {
     alert(score);
     return window.location.assign("Test.html");
   }
-
+  questionCounter++
+  questionsText.innerHTML="Question "+(questionCounter) +"of "+arabicQuestions.length
   getQuestions();
 };
 

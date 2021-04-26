@@ -44,12 +44,14 @@ const animalsQuestions = [
 
 const options = document.querySelector(".all");
 
+let questionCounter=1;
 let currentQuestion;
 let allAnimalsQuestions = [];
 let allAnimalsOptions = [];
 let counter = animalsQuestions.length;
 let score = "";
 let scoreCounter = 0;
+const questionsText=document.querySelector(".questionNumber")
 
 const setAllAnimalsQuestions = () => {
   const totalAnimalsQuestions = animalsQuestions.length;
@@ -60,6 +62,7 @@ const setAllAnimalsQuestions = () => {
 
 const getQuestions = () => {
   //Questions
+  questionsText.innerHTML="Question "+(questionCounter) +"of "+animalsQuestions.length
   options.innerHTML = "";
   const questionNumber =
     allAnimalsQuestions[Math.floor(Math.random() * allAnimalsQuestions.length)];
@@ -93,6 +96,7 @@ const getQuestions = () => {
   counter--;
 };
 
+
 const getResult = (answer, correctAnswer) => {
   console.log("getResult");
 
@@ -120,6 +124,7 @@ const getResult = (answer, correctAnswer) => {
      Good luck`;
     document.querySelector("#btn" + answer).onclick = false;
     document.querySelector("#btn" + correctAnswer).onclick = false;
+    
     //console.log(score);
   }
 };
@@ -132,7 +137,8 @@ const next = () => {
     alert(score);
     return window.location.assign("Test.html");
   }
-
+  questionCounter++
+  questionsText.innerHTML="Question "+(questionCounter) +"of "+animalsQuestions.length
   getQuestions();
 };
 

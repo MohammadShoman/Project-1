@@ -2,24 +2,15 @@ console.log("Sciences");
 
 const sciencesQuestions = [
   {
-    question: "Which of the following is a non metal that remains liquid at room temperature ?",
-    options: [
-      "A) Phosphorouse",
-      "B) Bromine",
-      "C) Chlorine",
-      "D) Helium",
-    ],
+    question:
+      "Which of the following is a non metal that remains liquid at room temperature ?",
+    options: ["A) Phosphorouse", "B) Bromine", "C) Chlorine", "D) Helium"],
     answer: 1,
   },
 
   {
     question: "Which of the following is used in pencils ?",
-    options: [
-      "A) Graphite",
-      "B) Silicon",
-      "C) Charcoal",
-      "D) Phosphorous",
-    ],
+    options: ["A) Graphite", "B) Silicon", "C) Charcoal", "D) Phosphorous"],
     answer: 0,
   },
 
@@ -30,7 +21,12 @@ const sciencesQuestions = [
   },
   {
     question: "Which of the gas is not known as green house gas ?",
-    options: ["A) Methane", "B) Nitrous oxide", "C) Carbon dioxide", "D) Hydrogen"],
+    options: [
+      "A) Methane",
+      "B) Nitrous oxide",
+      "C) Carbon dioxide",
+      "D) Hydrogen",
+    ],
     answer: 3,
   },
   {
@@ -44,12 +40,14 @@ const sciencesQuestions = [
 
 const options = document.querySelector(".all");
 
+let questionCounter = 1;
 let currentQuestion;
 let allSciencesQuestions = [];
 let allSciencesOptions = [];
 let counter = sciencesQuestions.length;
 let score = "";
 let scoreCounter = 0;
+const questionsText = document.querySelector(".questionNumber");
 
 const setAllSciencesQuestions = () => {
   const totalSciencesQuestions = sciencesQuestions.length;
@@ -60,9 +58,13 @@ const setAllSciencesQuestions = () => {
 
 const getQuestions = () => {
   //Questions
+  questionsText.innerHTML =
+    "Question " + questionCounter + "of " + sciencesQuestions.length;
   options.innerHTML = "";
   const questionNumber =
-    allSciencesQuestions[Math.floor(Math.random() * allSciencesQuestions.length)];
+    allSciencesQuestions[
+      Math.floor(Math.random() * allSciencesQuestions.length)
+    ];
   currentQuestion = questionNumber;
   // console.log(currentQuestion)
   const questions = document.createElement("h2");
@@ -84,7 +86,6 @@ const getQuestions = () => {
   }
 
   for (i = 0; i < allOptions; i++) {
-    
     options.innerHTML += `<button class="btn" id="btn${i}" onclick="getResult(${i},${currentQuestion.answer})"  >${currentQuestion.options[i]}</button>`;
   }
 
@@ -132,7 +133,9 @@ const next = () => {
     alert(score);
     return window.location.assign("Test.html");
   }
-
+  questionCounter++;
+  questionsText.innerHTML =
+    "Question " + questionCounter + "of " + sciencesQuestions.length;
   getQuestions();
 };
 

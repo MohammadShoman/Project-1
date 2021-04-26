@@ -44,12 +44,14 @@ const sportsQuestions = [
 
 const options = document.querySelector(".all");
 
+let questionCounter=1;
 let currentQuestion;
 let allSportsQuestions = [];
 let allSportsOptions = [];
 let counter = sportsQuestions.length;
 let score = "";
 let scoreCounter = 0;
+const questionsText=document.querySelector(".questionNumber")
 
 const setAllSportsQuestions = () => {
   const totalSportsQuestions = sportsQuestions.length;
@@ -60,6 +62,7 @@ const setAllSportsQuestions = () => {
 
 const getQuestions = () => {
   //Questions
+  questionsText.innerHTML="Question "+(questionCounter) +"of "+sportsQuestions.length
   options.innerHTML = "";
   const questionNumber =
     allSportsQuestions[Math.floor(Math.random() * allSportsQuestions.length)];
@@ -132,7 +135,8 @@ const next = () => {
     alert(score);
     return window.location.assign("Test.html");
   }
-
+  questionCounter++
+  questionsText.innerHTML="Question "+(questionCounter) +"of "+sportsQuestions.length
   getQuestions();
 };
 
